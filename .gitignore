@@ -1,0 +1,8 @@
+target/
+build/
+build/**
+.cache
+.project
+.buildpath
+.settings/
+.settings/**

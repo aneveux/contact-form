@@ -137,7 +137,7 @@ $.get("token.php",function(txt){
 			}
 		} else {
 			?>
-		<form action="./index.php" method="post" autocomplete="on">
+		<form action="./index.php" method="post" autocomplete="on" class="secure">
 			<p>
 				<label for="username" class="iconic user"> Name <span
 					class="required">*</span>
@@ -171,7 +171,7 @@ $.get("token.php",function(txt){
 				<label for="message" class="iconic comment"> Message <span
 					class="required">*</span>
 				</label>
-				<textarea
+				<textarea name="message" id="message"
 					placeholder="Don't be shy, live me a friendly message and I'll answer as soon as possible "
 					required="required"></textarea>
 			</p>

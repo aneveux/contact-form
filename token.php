@@ -1,5 +1,5 @@
 <?php
-$ct = mktime();
+$ct = time();
 setcookie('token',md5('secret-salt'.$ct), 0, '/');
 # 'Expires' in the past
 header("Expires: Mon, 26 Jul 1997 05:00:00 GMT");

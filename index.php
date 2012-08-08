@@ -83,7 +83,7 @@ $.get("token.php",function(txt){
 			//Then get the token related stuff, used for some security
 			if(isset($_POST['ts']) && isset($_COOKIE['token']) && $_COOKIE['token'] == md5('secret-salt'.$_POST['ts'])) $proceed = true;
 			//Check if the time allowed to the user is respected
-			if($proceed && !(((int)$_POST['ts'] + $seconds) < mktime())) {
+			if($proceed && !(((int)$_POST['ts'] + $seconds) < time())) {
 				//Remove special chars from every user provided data
 				$username = htmlspecialchars($_POST['username']);
 				$usermail = htmlspecialchars($_POST['usermail']);
